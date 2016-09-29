@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>It Could Be Better.</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Compiled PostCSS file -->
+		<link rel="stylesheet" href="dist/style.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-transition="convex" class="intro">
+					<h1 class="fragment">Make Default HTML Elements<br> Great Again.</h1>
+					<p class="fragment">...or improving the UX using transitions and<br> interactions via CSS.</p>
+				</section><!-- /.intro -->
+
+				<section data-transition="convex">
+					<h2>With a talented designer...</h2>
+				</section>
+
+				<section class="angie" data-background-image="http://i.imgur.com/2AYioyg.gif">
+					
+				</section><!-- /.angie -->
+				
+				<section>
+					<h2>And a suave developer...</h2>
+				</section>
+
+				<section data-background-image="http://i.imgur.com/Cwushi8.jpg">
+
+				</section>
+
+				<section>
+					<p>Sorry...2 suave developers.</p>
+					<p class="fragment"><img src="http://i.imgur.com/GEqcXRS.jpg" alt=""></p>
+				</section>
+
+				<section>
+					<h2>And a pinch of CSS...</h2>
+				</section>
+
+				<section data-background-image="http://i.giphy.com/ytnWk8xrXAXrq.gif">
+
+				</section>
+
+				<section>
+					<p>We can turn default everday elements into an awesome user experience.</p>
+					<p><img src="http://i.giphy.com/pwQdvTbFhds3e.gif" alt=""></p>
+				</section>
+
+				<section>
+					<p class="small">(and probably charge more for future clients too)</p>
+					<p class="fragment"><img src="http://i.giphy.com/qi8Yhj4pKcIec.gif" alt=""></p>
+				</section>
+
+				<section class="links">
+					<h2>Links</h2>
+					<p class="fragment">Default links are boring and instantly change state when hovered.</p>
+					<p class="fragment"><a href="#">Default html link</a></p>
+					<p class="fragment">Yawn. Adding a half second transition takes one line of code and makes the link more interactive.</p>
+					<p class="fragment"><a href="#" class="link-transition">Transition on hover</a></p>
+				</section>
+
+				<section class="links">
+					<h2>Let's take it a step further.</h2>
+					<p class="fragment">Many links are underlined when hovered, like so:</p>
+					<p class="fragment"><a href="#" class="boring-underline">Default underline.</a></p>
+					<p class="fragment">But we can use pseudo elements to animate the underline.</p>
+					<p class="fragment"><a href="#" class="animate-underline">Animate the underline</a></p>
+					<p class="fragment"><a href="#" class="underline-center">Underline from center</a></p>
+					<p class="fragment"><a href="#" class="underline-right">Underline from right</a></p>
+				</section>
+
+				<section class="navs">
+					<h2>Combining what we know into navs.</h2>
+					<p class="fragment">Using pseudo elements and transitions, let's try out some tricks with hovering on nav elements.</p>
+					<ul class="fragment nav nav-bracket">
+						<li><a href="#">Nav item 1</a></li>
+						<li><a href="#">Nav item 2</a></li>
+						<li class="marlon"><a href="#">Hi Marlon!</a></li>
+					</ul>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
