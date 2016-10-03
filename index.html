@@ -15,6 +15,8 @@
 		<!-- Compiled PostCSS file -->
 		<link rel="stylesheet" href="dist/style.css">
 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
@@ -22,6 +24,14 @@
 			link.type = 'text/css';
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<script>
+			$(document).ready(function(){
+				$('.hamburger').click(function(){
+					$(this).toggleClass('is-active');
+				});
+			});
 		</script>
 	</head>
 	<body>
@@ -97,6 +107,112 @@
 						<li><a href="#">Nav item 2</a></li>
 						<li class="marlon"><a href="#">Hi Marlon!</a></li>
 					</ul>
+				</section>
+
+				<section class="navs">
+					<h2>More nav examples.</h2>
+					<ul class="fragment nav nav-swords">
+						<li><a href="#">Fancy nav item</a></li>
+						<li><a href="#">Nav Item 2</a></li>
+						<li><a href="#">Another nav item</a></li>
+					</ul>
+					<ul class="fragment nav nav-cross">
+						<li><a href="#">Nav item 1</a></li>
+						<li><a href="#">Nav item 2</a></li>
+						<li><a href="#">Nav item 3</a></li>
+					</ul>
+				</section>
+
+				<section data-background-image="http://i.giphy.com/11ISwbgCxEzMyY.gif">
+
+				</section>
+
+				<section class="buttons">
+					<h2>Buttons!</h2>
+					<p>Some of my favorite effects for buttons.</p>
+					<ul>
+						<li><a class="grow" href="#">Grow</a></li>
+						<li><a class="shrink" href="#">Shrink</a></li>
+						<li><a class="shadow" href="#">No blur shadow</a></li>
+						<li><a class="hvr-radial-out" href="#">Radial Out</a></li>
+						<li><a class="hvr-shutter-in-horizontal" href="#">Shutter In Effect</a></li>
+						<li><a class="hvr-float-shadow" href="#">Float Shadow</a></li>
+						<li><a class="hvr-pulse" href="#">Sign up!</a></li>
+						<li><a class="hvr-bubble-top" href="#">Bubble Tip</a></li>
+						<li><a class="hvr-shutter-in-vertical" href="#">Shutter in vertical</a></li>
+						<li><a class="insane" href="#">Make Angie hate it</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Hamburger menus!</h2>
+					<img class="fragment" src="http://i.giphy.com/cnPUvIC5iWczC.gif" alt="">
+				</section>
+
+				<section class="burgers">
+					<div class="flex">
+
+						<div class="burger">
+							<button class="hamburger hamburger--collapse" type="button">
+							  <span class="hamburger-box">
+							    <span class="hamburger-inner"></span>
+							  </span>
+							</button>
+						</div>
+
+						<div class="burger">
+							<button class="hamburger hamburger--spin" type="button">
+							  <span class="hamburger-box">
+							    <span class="hamburger-inner"></span>
+							  </span>
+							</button>
+						</div>
+
+						<div class="burger">
+							<button class="hamburger hamburger--stand" type="button">
+							  <span class="hamburger-box">
+							    <span class="hamburger-inner"></span>
+							  </span>
+							</button>
+						</div>
+
+						<div class="burger">
+							<button class="hamburger hamburger--vortex" type="button">
+							  <span class="hamburger-box">
+							    <span class="hamburger-inner"></span>
+							  </span>
+							</button>
+						</div>
+
+						<div class="burger">
+							<button class="hamburger hamburger--emphatic" type="button">
+							  <span class="hamburger-box">
+							    <span class="hamburger-inner"></span>
+							  </span>
+							</button>
+						</div>
+
+						<div class="burger">
+							<button class="hamburger hamburger--elastic" type="button">
+							  <span class="hamburger-box">
+							    <span class="hamburger-inner"></span>
+							  </span>
+							</button>
+						</div>
+
+					</div>
+				</section>
+
+				<section>
+					<h2>Wrapping up.</h2>
+					<p class="fragment">These elements and effects alone seem small and insignificant.</p>
+					<p class="fragment">But when attention to detail is given to every (or nearly) every element on a website, it makes a difference.</p>
+					<p class="fragment">It conveys to the user that the site is one of quality and attention to detail, it stands out from the sea of others.</p>
+				</section>
+
+				<section>
+					<h2>Thanks!</h2>
+					<img src="http://i.giphy.com/8VrtCswiLDNnO.gif" alt="">
 				</section>
 
 			</div>
