@@ -42,51 +42,30 @@
 					<p class="fragment">...or improving the UX using transitions and<br> interactions via CSS.</p>
 				</section><!-- /.intro -->
 
-				<section data-transition="convex">
-					<h2>With a talented designer...</h2>
-				</section>
-
-				<section class="angie" data-background-image="http://i.imgur.com/2AYioyg.gif">
-					
-				</section><!-- /.angie -->
-				
-				<section>
-					<h2>And a suave developer...</h2>
-				</section>
-
-				<section data-background-image="http://i.imgur.com/Cwushi8.jpg">
-
-				</section>
-
-				<section>
-					<p>Sorry...2 suave developers.</p>
-					<p class="fragment"><img src="http://i.imgur.com/GEqcXRS.jpg" alt=""></p>
-				</section>
-
-				<section>
-					<h2>And a pinch of CSS...</h2>
-				</section>
-
-				<section data-background-image="http://i.giphy.com/ytnWk8xrXAXrq.gif">
-
-				</section>
-
-				<section>
-					<p>We can turn default everday elements into an awesome user experience.</p>
-					<p><img src="http://i.giphy.com/pwQdvTbFhds3e.gif" alt=""></p>
-				</section>
-
-				<section>
-					<p class="small">(and probably charge more for future clients too)</p>
-					<p class="fragment"><img src="http://i.giphy.com/qi8Yhj4pKcIec.gif" alt=""></p>
-				</section>
-
 				<section class="links">
 					<h2>Links</h2>
 					<p class="fragment">Default links are boring and instantly change state when hovered.</p>
 					<p class="fragment"><a href="#">Default html link</a></p>
 					<p class="fragment">Yawn. Adding a half second transition takes one line of code and makes the link more interactive.</p>
 					<p class="fragment"><a href="#" class="link-transition">Transition on hover</a></p>
+				</section>
+
+				<section class="code-sample">
+					<p>
+						<pre><code data-trim data-noescape>
+.links .link-transition {
+  -webkit-transition:color .5s ease-in;
+  -o-transition:color .5s ease-in;
+  -moz-transition:color .5s ease-in;
+  transition:color .5s ease-in;
+}
+.links .link-transition:hover {
+  color:#FF0084;
+}
+						</code></pre>
+					</p>
+					<p class="fragment">Run these through Autoprefixr to automatically prefix your style rules.</p>
+					<p class="fragment">Going forward, I will be using SASS for brevity in the code examples.</p>
 				</section>
 
 				<section class="links">
@@ -99,13 +78,72 @@
 					<p class="fragment"><a href="#" class="underline-right">Underline from right</a></p>
 				</section>
 
+				<section class="code-example">
+					<h2>Animating the underline from left.</h2>
+					<p>
+						<pre><code data-trim data-noescape>
+.animate-underline {
+    position: relative;
+    transition:all .5s ease-out;
+    &:hover {
+        color: $pink;
+    }
+    &:after {
+        content:"";
+        position:absolute;
+        left:0;
+        bottom:0;
+        border-bottom:5px solid $lightblue;
+        width:0%;
+        transition: all .5s ease-out;
+    }
+    &:hover:after {
+        border-bottom:5px solid $pink;
+        width:100%;
+    }
+}
+						</code></pre>
+					</p>
+				</section>
+
+				<section class="code-example">
+					<h2>Animating the underline from center.</h2>
+					<p>
+						<pre><code data-trim data-noescape>
+.underline-center {
+    position: relative;
+    transition: all .5s ease-out;
+    &:hover {
+        color:$pink;
+    }
+    &:after {
+        content: "";
+        position:absolute;
+        left:50%;
+        right:50%;
+        bottom:0;
+        height:0px;
+        background-color:$lightblue;
+        transition: all .5s ease-out;
+    }
+    &:hover:after {
+        left:0px;
+        right:0px;
+        background-color:$pink;
+        height:4px;
+    }
+}
+						</code></pre>
+					</p>
+				</section>
+
 				<section class="navs">
 					<h2>Combining what we know into navs.</h2>
 					<p class="fragment">Using pseudo elements and transitions, let's try out some tricks with hovering on nav elements.</p>
 					<ul class="fragment nav nav-bracket">
 						<li><a href="#">Nav item 1</a></li>
 						<li><a href="#">Nav item 2</a></li>
-						<li class="marlon"><a href="#">Hi Marlon!</a></li>
+						<li class="marlon"><a href="#">Hi Allie!</a></li>
 					</ul>
 				</section>
 

@@ -44,7 +44,7 @@ var browserSync = require('browser-sync').create();
 
 gulp.task('browser-sync', function() {
     browserSync.init({
-        proxy: "localhost:1999/interaction"
+        proxy: "codepen.dev:1999"
     });
 });
 
