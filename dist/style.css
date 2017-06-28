@@ -445,6 +445,12 @@
           box-shadow:15px 15px 20px purple;
   background-color:yellow;
 }
+.buttons ul li.insane-parent {
+  text-align: center;
+  display: block;
+  width:100%;
+}
+
 .burgers .flex {
   display:-webkit-box;
   display:-webkit-flex;
@@ -455,32 +461,41 @@
       -ms-flex-wrap:wrap;
           flex-wrap:wrap;
 }
+
 .burgers .flex .burger {
   width:33%;
   min-height:300px;
 }
+
 .burgers .flex .burger .hamburger {
   position:relative;
   top:120px;
 }
+
 .burgers .flex .burger .hamburger:focus {
   outline:0;
 }
+
 .burgers .flex .burger:nth-child(1) {
   background-color:#B02B2C;
 }
+
 .burgers .flex .burger:nth-child(2) {
   background-color:#D15600;
 }
+
 .burgers .flex .burger:nth-child(3) {
   background-color:#C79810;
 }
+
 .burgers .flex .burger:nth-child(4) {
   background-color:#73880A;
 }
+
 .burgers .flex .burger:nth-child(5) {
   background-color:#356AA0;
 }
+
 .burgers .flex .burger:nth-child(6) {
   background-color:#D01F3C;
 }	

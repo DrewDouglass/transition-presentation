@@ -390,9 +390,15 @@ $default-border: 1px solid rgba(0,0,0,0.25);
 					background-color:yellow;
 				}
 			}
+      &.insane-parent {
+        text-align: center;
+        display: block;
+        width:100%;
+      }
 		}
 	}
 }
+
 .burgers {
 	.flex {
 		display:flex;

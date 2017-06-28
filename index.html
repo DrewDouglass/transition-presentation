@@ -42,6 +42,38 @@
 					<p class="fragment">...or improving the UX using transitions and<br> interactions via CSS.</p>
 				</section><!-- /.intro -->
 
+				<section class="bio">
+					<h2>Who am I?</h2>
+					<p class="fragment">@DrewDouglass</p>
+					<p class="fragment">Senior Web Developer @ Ungerboeck Digital</p>
+					<p class="fragment">Part time stock photo model.</p>
+				</section>
+
+				<section class="sparky">
+					<h2>Coding</h2>
+					<img class="fragment" src="/sparky1.jpg" alt="">
+				</section>
+
+				<section class="sparky">
+					<h2>Relaxing</h2>
+					<img class="fragment" src="/sparky2.jpg" alt="">
+				</section>
+
+				<section class="sparky">
+					<h2>Managing</h2>
+					<img class="fragment" src="/sparky3.jpg" alt="">
+				</section>
+
+				<section>
+					<p>(Don't ever make the mistake of wearing a suit to work as a developer, even if you have an event after work that night. If you do, they take photos of you and put them on the internet.)</p>
+				</section>
+
+				<section class="sparky">
+					<h2>Talk</h2>
+					<p>We can improve a websites image by taking a few minutes to add simple transitions and effects to interactive elements.</p>
+					<p class="fragment">Kevin often refers to this as the last 5% of the website and it makes a huge difference to clients and users first impression of your brand.</p>
+				</section>
+
 				<section class="links">
 					<h2>Links</h2>
 					<p class="fragment">Default links are boring and instantly change state when hovered.</p>
@@ -137,6 +169,34 @@
 					</p>
 				</section>
 
+				<section class="code-example">
+					<h2>Animating the underline from right.</h2>
+					<p>
+						<pre><code data-trim data-noescape>
+.underline-right {
+    position: relative;
+    transition:all .5s ease-out;
+    &:hover {
+        color: $pink;
+    }
+    &:after {
+        content:"";
+        position:absolute;
+        right:0;
+        bottom:0;
+        border-bottom:5px solid $lightblue;
+        width:0%;
+        transition: all .5s ease-out;
+    }
+    &:hover:after {
+        border-bottom:5px solid $pink;
+        width:100%;
+    }
+}
+						</code></pre>
+					</p>
+				</section>
+
 				<section class="navs">
 					<h2>Combining what we know into navs.</h2>
 					<p class="fragment">Using pseudo elements and transitions, let's try out some tricks with hovering on nav elements.</p>
@@ -147,18 +207,215 @@
 					</ul>
 				</section>
 
+				<section class="code-example">
+					<h2>Animating the bracket navs with transitions and pseudo elements.</h2>
+					<p>
+						<pre><code data-trim data-noescape>
+.nav {
+    width:100%;
+    list-style-type: none;
+    padding-left:0;
+    margin-left:0;
+    background-color:$darkblue;
+    padding:5% 2%;
+    text-align:center;
+    li {
+        display:inline-block;
+        font-size:30px;
+        margin:0 1%;
+        text-transform: uppercase;
+        a  {
+            color:$white;
+        }
+    }
+}
+.nav-bracket {
+    a {
+        transition: all 0.5s ease-out;
+        &:hover {
+            color:$white;
+        }
+        &:before {
+            display:inline-block;
+            transition:all .5s ease-out;
+            content: "[";
+            transform: translateX(20px) rotate(0deg) scale(1);
+            opacity:0;
+            margin-right:10px;
+        }
+        &:after {
+            display:inline-block;
+            transition:all .5s ease-out;
+            content: "]";
+            transform: translateX(-20px) rotate(0deg) scale(1);
+            opacity:0;
+            margin-left:10px;
+        }
+        &:hover:before, &:hover:after {
+            transform:translateX(0px);
+            opacity:1;
+        }
+    }
+}
+						</code></pre>
+					</p>
+				</section>
+
+				<section class="code-example">
+					<h2>How to get brownie points with your wife at a CodePen talk...</h2>
+					<p>
+						<pre><code data-trim data-noescape>
+li.allie {
+    a {
+        &:before {
+            content:"❤";
+            color: $pink;
+        }
+        &:after {
+            content:"❤";
+            color:$pink;
+        }
+        &:hover:before {
+            transform: translateX(0px) rotate(720deg) scale(1.5);
+        }
+        &:hover:after {
+            transform: translateX(0px) rotate(-720deg) scale(1.5);
+        }
+    }
+}
+						</code></pre>
+					</p>
+				</section>
+
 				<section class="navs">
 					<h2>More nav examples.</h2>
-					<ul class="fragment nav nav-swords">
+					<ul class="nav nav-swords">
 						<li><a href="#">Fancy nav item</a></li>
 						<li><a href="#">Nav Item 2</a></li>
 						<li><a href="#">Another nav item</a></li>
 					</ul>
-					<ul class="fragment nav nav-cross">
+				</section>
+
+				<section class="code-example">
+					<h2>"Sword" Navigation Example</h2>
+					<p>
+						<pre><code data-trim data-noescape>
+.nav-swords {
+	background-color: $gold;
+	li {
+		a {
+			position: relative;
+			display:inline-block;
+			padding:0px 20px;
+			height: 45px;
+			line-height: 45px;
+			margin: 15px;
+			outline: none;
+			color: #fff;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-weight: 400;
+			text-shadow: 0 0 1px rgba(255,255,255,0.3);
+			&:before, &:after {
+				transition:all .3s;
+				width:45px;
+				height:2px;
+				opacity:0.2;
+				background-color:$white;
+				position: absolute;
+				box-sizing: border-box;
+			}
+			&:before {
+				top:0;
+				left:0;
+				transform: rotate(90deg);
+				transform-origin: 0 0;
+				content:"";
+			}
+			&:after {
+				bottom:0;
+				right:0;
+				transform:rotate(90deg);
+				transform-origin: 100% 0;
+				content:"";
+			}
+			&:hover:before {
+				left:50%;
+				transform:rotate(0deg) translateX(-50%);
+				opacity:1;
+				width:50%;
+			}
+			&:hover:after {
+				right:50%;
+				transform:rotate(0deg) translateX(50%);
+				opacity:1;
+				width:50%;
+			}
+		}
+	}
+}
+						</code></pre>
+					</p>
+				</section>
+
+				<section class="navs">
+					<ul class="nav nav-cross">
 						<li><a href="#">Nav item 1</a></li>
 						<li><a href="#">Nav item 2</a></li>
 						<li><a href="#">Nav item 3</a></li>
 					</ul>
+				</section>
+
+				<section class="code-example">
+					<h2>Animating the "X" navs.</h2>
+					<p>
+						<pre><code data-trim data-noescape>
+.nav-cross {
+	background-color:#B02B2C;
+	li {
+		a {
+			opacity:0.7;
+			transition:all .5s;
+			margin-top:15px;
+			margin-bottom:15px;
+			&:hover {
+				opacity:1;
+			}
+			&:before, &:after {
+				transition:all .3s;
+				position:absolute;
+				content:"";
+				opacity:0.3;
+				top:44%;
+				margin-top:-1px;
+			}
+			&:before {
+				left:0;
+				right:0;
+				width:100%;
+				height:2px;
+				background-color:$white;
+				transform: translateY(-20px);
+			}
+			&:after {
+				height:2px;
+				background-color:$white;
+				left:0;
+				right:0;
+				width:100%;
+				transform: translateY(20px);
+			}
+			&:hover:before {
+				transform:rotate(45deg);
+			}
+			&:hover:after {
+				transform:rotate(-45deg);
+			}
+		}
+	}
+}
+						</code></pre>
+					</p>
 				</section>
 
 				<section data-background-image="http://i.giphy.com/11ISwbgCxEzMyY.gif">
@@ -178,13 +435,27 @@
 						<li><a class="hvr-pulse" href="#">Sign up!</a></li>
 						<li><a class="hvr-bubble-top" href="#">Bubble Tip</a></li>
 						<li><a class="hvr-shutter-in-vertical" href="#">Shutter in vertical</a></li>
-						<li><a class="insane" href="#">Make Angie hate it</a></li>
+						
+					</ul>
+				</section>
+
+				<section class="buttons">
+					<h2>Don't over do it</h2>
+					<p>Your designer will hate you...</p>
+					<ul>
+						<li class="insane-parent"><a class="insane" href="#">Make Angie hate it</a></li>
 					</ul>
 				</section>
 
 				<section>
+					<h2>Hover.css</h2>
+					<img src="//i.imgur.com/PhTN7uJ.png" alt="">
+					<p>Many of the effects we just saw are available out of the box, and they all use basic transitions and pseudo elements.
+				</section>
+
+				<section>
 					<h2>Hamburger menus!</h2>
-					<img class="fragment" src="http://i.giphy.com/cnPUvIC5iWczC.gif" alt="">
+					<div id="hamburger">🍔</div>
 				</section>
 
 				<section class="burgers">
@@ -249,8 +520,23 @@
 				</section>
 
 				<section>
-					<h2>Thanks!</h2>
-					<img src="http://i.giphy.com/8VrtCswiLDNnO.gif" alt="">
+					<h2>Resources</h2>
+					<ul>
+						<li>View this presentation at <a href="http://creatingdrew.com/presentation">creatingdrew.com/presentation</a></li>
+						<li><a href="http://ianlunn.github.io/Hover/">Hover.css</a></li>
+						<li><a href="https://jonsuh.com/hamburgers/">Hamburger Menu Animations</a></li>
+						<li>Twitter <a href="https://twitter.com/drewdouglass">@DrewDouglass</a></li>
+						<li>CodePen <a href="https://codepen.io/DrewDouglass/">DrewDouglass</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Questions?</h2>
+				</section>
+
+				<section>
+					<h2>Thank you!</h2>
+					<p>👍</p>
 				</section>
 
 			</div>
